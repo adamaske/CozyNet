@@ -1,4 +1,6 @@
 #include "Utils/Connection.h"
-Connection::Connection(Socket socket, Endpoint endpoint)
+Connection::Connection(Socket _socket, Endpoint _endpoint) 
+	: endpoint(_endpoint), socket(_socket)
 {
+
 }

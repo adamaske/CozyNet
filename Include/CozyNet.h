@@ -6,7 +6,17 @@
 #include <stdio.h>
 #pragma comment(lib, "Ws2_32.lib")
 
+//Utils
 #include "Utils/Constants.h"
+#include "Utils/Packet.h"
+#include "Utils/Packet2.h"
+#include "Utils/PacketFactory.h"
+#include "Utils/Socket.h"
+#include "Utils/Connection.h"
+//Core
+#include "Config.h"
+#include "Server.h"
+#include "Client.h"
 
 #include <string>
 #include <functional>
@@ -14,10 +24,13 @@
 
 namespace CozyNet{
 
+    struct CozyNetSettings {
+    public:
+
+    };
+
     int Initialize();
-
     void Shutdown();
-
 
     //Logging
     void Info(std::string message);

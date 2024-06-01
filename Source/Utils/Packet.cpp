@@ -22,7 +22,7 @@ PacketType Packet::GetPacketType() {
 	return static_cast<PacketType>(ntohl(*packet_type_ptr));
 }
 
-void Packet::Clear() { 
+void Packet::Clear() {
 	buffer.resize(sizeof(PacketType)); // 4 bytes
 	AssignPacketType(Invalid);
 }

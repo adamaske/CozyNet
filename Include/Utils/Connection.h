@@ -9,7 +9,10 @@ class Connection {
 private:
 
 public:
-	Connection(Socket socket, Endpoint endpoint);
+	Connection(Socket _socket, Endpoint _endpoint);
 
-
+	Endpoint endpoint;
+	Socket socket;
+	WSAPOLLFD fd;
+	WSAPOLLFD polled_fd;
 };

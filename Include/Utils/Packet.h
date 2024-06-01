@@ -1,6 +1,8 @@
 #pragma once
 
 #include "CozyNet.h"
+#include <vector>
+#include <string>
 
 enum PacketType {
 	Invalid,
