@@ -98,7 +98,7 @@ int Server::CreateConnection()
 int Server::ServiceConnections()
 {
 	for (auto& connection : connections) {
-		int result = ServiceConnetion(connection);
+		int result = ServiceConnection(connection);
 		if (result == CN_ERROR) {
 
 		}
@@ -106,10 +106,18 @@ int Server::ServiceConnections()
 	return CN_SUCCESS;
 }
 
-int Server::ServiceConnetion(Connection& connection)
+int Server::ServiceConnection(const Connection& connection)
 {
-	auto& fd = connection.polled_fd;
+	auto fd = connection.polled_fd;
+	if (fd.revents & POLLERR) {
 
+	}
+	if (fd.revents & POLLNVAL) {
+
+	}
+	if (fd.revents & POLLHUP) {
+
+	}
 
 
 	return CN_SUCCESS;

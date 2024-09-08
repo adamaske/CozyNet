@@ -32,10 +32,10 @@ void RunClient(Endpoint endpoint, bool* should_run) {
 }
 int main(int argc, char* argv[]) {
 
+    CozyNet::Initialize();
     CozyNet::SetInfoCallback(InfoCallback);
     CozyNet::SetErrorCallback(ErrorCallback);
 
-    CozyNet::Initialize();
 
     
     Endpoint endpoint = Endpoint("127.0.0.1", 8400);

@@ -28,7 +28,7 @@ public:
 	int CreateConnection();
 
 	int ServiceConnections();
-	int ServiceConnetion(Connection& connection);
+	int ServiceConnection(const Connection& connection);
 
 	void Listen();
 
